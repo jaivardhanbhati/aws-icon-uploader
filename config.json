@@ -1,6 +1,6 @@
 {
 "accessKeyId": "<your-access-key-id>",
 "secretAccessKey": "<your-secret-access-key>",
-"region": "us-east-1",
-"signatureVersion":"v4"
+"region": "<us-region-code>",
+"signatureVersion":"<your version>"
 }
