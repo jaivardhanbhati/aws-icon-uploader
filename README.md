@@ -1,6 +1,6 @@
-# AWS SDK for Node.js Sample Project
+# Generic file-uploader to Amazon Cloud - s3 Bucket
 
-A simple Node.js application illustrating usage of the AWS SDK for Node.js.
+A simple Node.js application illustrating usage of the AWS SDK + Node.js.
 
 ## Requirements
 
@@ -11,26 +11,28 @@ dependencies (including the AWS SDK for Node.js) can be installed with:
 
 ## Basic Configuration
 
-You need to set up your AWS security credentials before the sample code is able
-to connect to AWS. You can do this by creating a file named "credentials" at ~/.aws/ 
-(C:\Users\USER_NAME\.aws\ for Windows users) and saving the following lines in the file:
+You need to set up your AWS security credentials in config.json to be able to connect 
+to your S3 instance on AWS. 
 
     [default]
     aws_access_key_id = <your access key id>
     aws_secret_access_key = <your secret key>
+    aws_s3_bucket_region = <eg. us-east , us-west>
 
 See the [Security Credentials](http://aws.amazon.com/security-credentials) page.
-It's also possible to configure your credentials via a configuration file or
-directly in source. See the AWS SDK for Node.js [Developer Guide](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html)
+See the AWS SDK for Node.js [Developer Guide](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html)
 for more information.
 
 ## Running the S3 sample
 
-This sample application connects to Amazon's [Simple Storage Service (S3)](http://aws.amazon.com/s3),
-creates a bucket, and uploads a file to that bucket. The script will automatically
-create the file to upload. All you need to do is run it:
+This sample service connects to Amazon's [Simple Storage Service (S3)](http://aws.amazon.com/s3) using the credentials,
+given under config.json .The script will automatically :
+- create a S3 bucket under default name if no servicename is provided else will create a bucketname with your servicename, 
+- uploads the file to that S3 bucket. 
 
-    node sample.js
+All you need to do is run it:
+
+    node app.js --file[required] --servicename[optional]
 
 The S3 documentation has a good overview of the [restrictions for bucket names](http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html)
 for when you start making your own buckets.
