@@ -1,0 +1,16 @@
+{
+  "name": "csp-icon-uploader-service",
+  "version": "1.0.0",
+  "description": "csp icon uploader to s3",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Jai Bhati",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.213.1",
+    "command-line-args": "^5.0.2",
+    "yargs": "^11.0.0"
+  }
+}
