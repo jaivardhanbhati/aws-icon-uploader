@@ -26,8 +26,9 @@ for more information.
 ## Running the S3 sample
 
 This sample service connects to Amazon's [Simple Storage Service (S3)](http://aws.amazon.com/s3) using the credentials,
-given under config.json .The script will automatically :
+given under config.json .The script will automatically 
 - create a S3 bucket under default name if no servicename is provided else will create a bucketname with your servicename, 
+- extract the filename if a whole path to the filename is provided
 - uploads the file to that S3 bucket. 
 
 All you need to do is run it:

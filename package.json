@@ -1,7 +1,7 @@
 {
-  "name": "csp-icon-uploader-service",
+  "name": "s3-icon-uploader-service",
   "version": "1.0.0",
-  "description": "csp icon uploader to s3",
+  "description": "s3 icon uploader to s3 buckets",
   "main": "app.js",
   "scripts": {
     "test": "node app.js"
